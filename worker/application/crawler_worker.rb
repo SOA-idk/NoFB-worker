@@ -11,7 +11,7 @@ module NoFB
       @queue = NoFB::Messaging::Queue.new(
         @config.AWS_QUEUE_URL, @config
       )
-      @group_list = ['302165911402681']
+      @group_list = ['302165911402681','817620721658179']
     end
 
     def testDriver
@@ -37,7 +37,7 @@ module NoFB
     # end
 
     def showCrawler
-      puts "show => #{@crawler_obj}" 
+      @crawler_obj.showCrawler
     end
 
     def read_subscibes
@@ -53,6 +53,14 @@ module NoFB
         subscribed_word: '才沒有訂閱這個字',
         fb_url: 'https://www.facebook.com/groups/302165911402681/posts/347058906913381'
       )
+    end
+
+
+    def loop_call
+      while true
+        call
+        sleep 60
+      end
     end
 
     def call
@@ -88,6 +96,40 @@ module NoFB
           end
         end
       end
+    end
+
+    def key0
+      @crawler_obj.key0
+    end
+    def key1
+      @crawler_obj.key1
+    end
+    def key2
+      @crawler_obj.key2
+    end
+    def key3
+      @crawler_obj.key3
+    end
+    def key4
+      @crawler_obj.key4
+    end
+    def key5
+      @crawler_obj.key5
+    end
+    def key6
+      @crawler_obj.key6
+    end
+    def key7
+      @crawler_obj.key7
+    end
+    def key8
+      @crawler_obj.key8
+    end
+    def key9
+      @crawler_obj.key9
+    end
+    def keyEnter
+      @crawler_obj.keyEnter
     end
 
   end

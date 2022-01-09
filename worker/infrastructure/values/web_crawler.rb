@@ -99,6 +99,44 @@ module NoFB
           NoFB::Repository::Post.db_find_or_create(post, content.fb_group_name)
         end
       end
+
+      def showCrawler
+        puts browser.html
+      end
+
+      def key0
+        browser.send_keys :numpad0
+      end
+      def key1
+        browser.send_keys :numpad1
+      end
+      def key2
+        browser.send_keys :numpad2
+      end
+      def key3
+        browser.send_keys :numpad3
+      end
+      def key4
+        browser.send_keys :numpad4
+      end
+      def key5
+        browser.send_keys :numpad5
+      end
+      def key6
+        browser.send_keys :numpad6
+      end
+      def key7
+        browser.send_keys :numpad7
+      end
+      def key8
+        browser.send_keys :numpad8
+      end
+      def key9
+        browser.send_keys :numpad9
+      end
+      def keyEnter
+        browser.send_keys :enter
+      end
     end
     # rubocop:enable Metrics/AbcSize
   end

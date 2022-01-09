@@ -26,7 +26,7 @@ module NoFB
         header = { 'Authorization' => "Bearer #{user_access_token}",
                   'Content-Type' => 'application/x-www-form-urlencoded' }
         data = {
-          'message': "你在「#{input[:fb_group_name]}」社團所訂閱的「#{input[:subscribed_word]}」已發現!!!\n趕快前往查看╰(*°▽°*)╯\n#{input[:fb_url]}"
+          'message': "你在「#{input[:fb_group_name]}」社團所訂閱的「#{input[:subscribed_word]}」已發現!!!\n趕快前往查看╰(*°▽°*)╯\nWe have found the word, \"#{input[:subscribed_word]}\", you subscribed appearing in the group \"#{input[:fb_group_name]}\"!!!\nCheck it Now╰(*°▽°*)╯\n#{input[:fb_url]}"
         }
         puts data[:message]
 

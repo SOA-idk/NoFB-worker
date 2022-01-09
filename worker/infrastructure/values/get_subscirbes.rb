@@ -30,8 +30,9 @@ module NoFB
           unless word_hash.has_key?(sub.group_id)
             word_hash[sub.group_id] = Hash.new()
           end
-          words = sub.word.split(', ')
+          words = sub.word.split(',')
           words.each do |word|
+            word = word.strip.squeeze(' ')
             if word_hash[sub.group_id].has_key?(word)
               word_hash[sub.group_id][word].append(sub.user_id.to_s)
             else
