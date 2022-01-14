@@ -98,6 +98,10 @@ module NoFB
       end
     end
 
+    def keyKeep
+      @crawler_obj.keyKeep
+    end
+
     def key0
       @crawler_obj.key0
     end

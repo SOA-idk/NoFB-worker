@@ -104,6 +104,10 @@ module NoFB
         puts browser.html
       end
 
+      def keyKeep
+        browser.elements(xpath: '//button').click
+      end
+
       def key0
         browser.send_keys :numpad0
       end
